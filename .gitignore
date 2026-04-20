@@ -1,0 +1,6 @@
+.env
+dist/
+node_modules/
+.next/
+.claude/
+docs/superpowers
