@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { DM_Sans, DM_Serif_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import LoadingScreen from "@/components/loading-screen"
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased`}>
+        <LoadingScreen />
         {children}
         <Analytics />
       </body>

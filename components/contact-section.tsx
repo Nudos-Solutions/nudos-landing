@@ -56,9 +56,10 @@ export default function ContactSection() {
               src="https://res.cloudinary.com/drasbgjxe/image/upload/v1776652504/yacht-aerial_famckg.jpg"
               alt="Aerial yacht view — Vessel Insurance"
               fill
-              className="object-cover object-center rotate-90"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center rotate-90 scale-150"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-accent/80 via-accent/30 to-accent/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-accent/15 to-black/40" />
 
             {/* Scanning line */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">

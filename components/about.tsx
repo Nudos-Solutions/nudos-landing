@@ -21,16 +21,16 @@ export default function About() {
   const { t } = useI18n()
 
   return (
-    <section id="about" className="py-16 px-6">
+    <section id="about" className="py-16 px-6 scroll-mt-20">
       <div className="mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Anchor className="w-5 h-5 text-accent" strokeWidth={2} />
-              <span className="text-sm font-medium text-foreground/70">{t.about.badge}</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-foreground/40">{t.about.badge}</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground leading-tight text-balance">
+            <h2 className="text-5xl md:text-6xl font-serif font-black text-foreground leading-tight tracking-tighter text-balance">
               {t.about.title}
             </h2>
 
@@ -63,6 +63,7 @@ export default function About() {
                 src="https://res.cloudinary.com/drasbgjxe/image/upload/v1776652502/market-value_tkoy3h.jpg"
                 alt="Vessel underwriting — the unseen risk"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-card" />

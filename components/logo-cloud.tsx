@@ -26,6 +26,7 @@ export default function LogoCloud() {
                 src={logo.src}
                 alt={logo.alt}
                 fill
+                sizes="220px"
                 className="object-contain"
               />
             </a>

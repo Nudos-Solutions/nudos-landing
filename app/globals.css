@@ -183,6 +183,12 @@
   50%       { transform: translate(-50%, -50%) scale(1.14); opacity: 0.15; }
 }
 
+@keyframes loadingSlide {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(200%); }
+  100% { transform: translateX(-100%); }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

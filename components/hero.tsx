@@ -151,6 +151,7 @@ export default function Hero() {
             src="https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652499/clean_sailboat_hero_xvq7ba.jpg"
             alt="AI Ship Hull Analysis and Maritime Insurance Platform"
             fill
+            sizes="100vw"
             className="object-cover object-[center_65%] md:object-[center_70%]"
             style={{
               filter: `brightness(${0.62 + p * 0.22}) contrast(${0.92 + p * 0.10}) saturate(${0.9 + p * 0.25})`,
