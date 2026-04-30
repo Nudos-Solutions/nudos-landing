@@ -4,7 +4,7 @@ import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { Menu, X, ArrowUpRight, Globe } from "lucide-react"
+import { Menu, X, ArrowUpRight, Globe, Instagram, Linkedin } from "lucide-react"
 import { useI18n, type Locale } from "@/lib/i18n"
 
 export default function Header() {
@@ -79,13 +79,33 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
+            <div className={`flex items-center gap-3 transition-all duration-300 ${scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100"}`}>
+              <a
+                href="https://www.instagram.com/usenudos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nudos-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/60 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
             <button
               onClick={toggleLocale}
-              className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold transition-colors ${scrolled ? "border-border text-foreground/70 hover:text-accent hover:border-accent" : "border-white/30 text-white/70 hover:text-white hover:border-white/60"}`}
+              className={`flex items-center gap-1.5 rounded-full border px-4 py-2.5 text-sm font-semibold transition-colors ${scrolled ? "border-border text-foreground/70 hover:text-accent hover:border-accent" : "border-white/30 text-white/70 hover:text-white hover:border-white/60"}`}
               aria-label={`Switch to ${locale === "en" ? "Spanish" : "English"}`}
             >
-              <Globe className="h-3.5 w-3.5" />
+              <Globe className="h-4 w-4" />
               {locale === "en" ? "ES" : "EN"}
             </button>
             <a
@@ -104,8 +124,8 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-6">
-            <nav className="flex flex-col gap-4">
+          <div className="md:hidden pt-4 pb-6 mt-2 rounded-lg bg-background/95 backdrop-blur-md px-4">
+            <nav className="flex flex-col gap-4 py-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -117,11 +137,31 @@ export default function Header() {
                 </a>
               ))}
               <div className="flex items-center gap-3 pt-2">
+                <a
+                  href="https://www.instagram.com/usenudos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-accent transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/nudos-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-accent transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+              <div className="flex items-center gap-3 pt-2">
                 <button
                   onClick={toggleLocale}
-                  className="flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-xs font-semibold text-foreground/70 hover:text-accent hover:border-accent transition-colors"
+                  className="flex items-center gap-1.5 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground/70 hover:text-accent hover:border-accent transition-colors"
                 >
-                  <Globe className="h-3.5 w-3.5" />
+                  <Globe className="h-4 w-4" />
                   {locale === "en" ? "ES" : "EN"}
                 </button>
                 <a

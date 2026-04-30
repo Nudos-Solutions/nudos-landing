@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
 
 export default function Footer() {
@@ -73,6 +73,26 @@ export default function Footer() {
                   className="text-sm text-foreground/60 hover:text-accent transition-colors"
                 >
                   {t.footer.email}
+                </a>
+              </div>
+              <div className="flex items-center gap-4 mt-2">
+                <a
+                  href="https://www.instagram.com/usenudos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-accent transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/nudos-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 hover:text-accent transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
                 </a>
               </div>
             </div>
