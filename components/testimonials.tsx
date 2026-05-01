@@ -37,8 +37,21 @@ const testimonials = [
 ]
 
 export default function Testimonials() {
+  const reviewSchemas = testimonials.map((t) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    author: { "@type": "Person", name: t.author },
+    reviewBody: t.quote,
+    itemReviewed: { "@type": "SoftwareApplication", name: "NUDOS" },
+  }))
+
   return (
     <section className="py-20 px-6 bg-card">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemas) }}
+      />
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="flex items-center gap-2 mb-4">

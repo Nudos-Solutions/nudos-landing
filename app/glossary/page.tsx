@@ -12,23 +12,43 @@ export const metadata: Metadata = {
   description:
     "Marine insurance terms explained: H&M, P&I, SOLAS, MARPOL, General Average, and more. A comprehensive glossary for the maritime insurance industry.",
   alternates: { canonical: "https://www.nudos.app/glossary" },
+  openGraph: {
+    title: "Marine Insurance Glossary | NUDOS",
+    description:
+      "Marine insurance terms explained: H&M, P&I, SOLAS, MARPOL, General Average, and more.",
+    images: [
+      {
+        url: "/og?title=Glossary&subtitle=Marine%20insurance%20terms%20explained",
+        width: 1200,
+        height: 630,
+        alt: "NUDOS Marine Insurance Glossary",
+      },
+    ],
+  },
 }
 
 export default function GlossaryPage() {
   const letters = getGlossaryLetters()
 
-  const definedTermSchemas = glossaryTerms.map((term) => ({
+  const definedTermSetSchema = {
     "@context": "https://schema.org",
-    "@type": "DefinedTerm",
-    name: term.term,
-    description: term.definition,
-  }))
+    "@type": "DefinedTermSet",
+    name: "Marine Insurance Glossary",
+    description: "Key terms and concepts in marine insurance, explained clearly.",
+    url: "https://www.nudos.app/glossary",
+    hasDefinedTerm: glossaryTerms.map((term) => ({
+      "@type": "DefinedTerm",
+      name: term.term,
+      description: term.definition,
+      url: `https://www.nudos.app/glossary#${term.slug}`,
+    })),
+  }
 
   return (
     <I18nProvider>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchemas) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
       />
       <main id="main-content" className="min-h-screen bg-background">
         <Header />
@@ -49,7 +69,7 @@ export default function GlossaryPage() {
             </p>
 
             {/* Letter navigation */}
-            <nav className="flex flex-wrap gap-2 mb-12 sticky top-20 bg-background/95 backdrop-blur-sm py-3 z-10">
+            <nav aria-label="Glossary letter navigation" className="flex flex-wrap gap-2 mb-12 sticky top-20 bg-background/95 backdrop-blur-sm py-3 z-10">
               {letters.map((letter) => (
                 <a
                   key={letter}

@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   description:
     "Insights on marine insurance technology, vessel inspection AI, condition scoring, and underwriting automation from the NUDOS team.",
   alternates: { canonical: "https://www.nudos.app/blog" },
+  openGraph: {
+    title: "Blog | NUDOS",
+    description:
+      "Insights on marine insurance technology, vessel inspection AI, condition scoring, and underwriting automation from the NUDOS team.",
+    images: [
+      {
+        url: "/og?title=Blog&subtitle=Marine%20insurance%20technology%20insights",
+        width: 1200,
+        height: 630,
+        alt: "NUDOS Blog",
+      },
+    ],
+  },
 }
 
 export default function BlogIndex() {
@@ -27,11 +40,35 @@ export default function BlogIndex() {
     })),
   }
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "NUDOS Blog",
+    description: "Insights on marine insurance technology, vessel inspection AI, condition scoring, and underwriting automation.",
+    url: "https://www.nudos.app/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "NUDOS",
+      url: "https://www.nudos.app",
+    },
+    blogPost: blogPosts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: `https://www.nudos.app/blog/${post.slug}`,
+      datePublished: post.date,
+      dateModified: post.dateModified,
+    })),
+  }
+
   return (
     <I18nProvider>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
       <main id="main-content" className="min-h-screen bg-background">
         <Header />

@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { DM_Sans, DM_Serif_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import LoadingScreen from "@/components/loading-screen"
-import { OrganizationSchema, SoftwareApplicationSchema, WebSiteSchema } from "@/components/structured-data"
+import { OrganizationSchema, SoftwareApplicationSchema, WebSiteSchema, LocalBusinessSchemas, ContactPageSchema } from "@/components/structured-data"
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -118,6 +118,8 @@ export default function RootLayout({
         <OrganizationSchema />
         <WebSiteSchema />
         <SoftwareApplicationSchema />
+        <LocalBusinessSchemas />
+        <ContactPageSchema />
         <LoadingScreen />
         {children}
         <Analytics />

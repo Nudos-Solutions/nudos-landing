@@ -3,6 +3,7 @@ export interface BlogPost {
   title: string
   description: string
   date: string
+  dateModified: string
   category: string
   keywords: string[]
   image: string
@@ -17,6 +18,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Learn how AI-powered computer vision detects hull damage across structural zones, replacing weeks-long manual inspections with instant, standardized analysis.",
     date: "2025-03-05",
+    dateModified: "2026-05-01",
     category: "Computer Vision",
     keywords: ["hull damage detection AI", "computer vision ship inspection", "cargo vessel hull analysis"],
     image:
@@ -54,6 +56,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Discover how automated vessel condition scoring delivers consistent, repeatable assessments against 47+ maritime standards — eliminating survey subjectivity.",
     date: "2025-03-05",
+    dateModified: "2026-05-01",
     category: "Maritime AI",
     keywords: ["vessel condition scoring", "maritime survey automation", "AI vessel assessment"],
     image:
@@ -94,6 +97,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "How AI-driven automation is compressing the marine insurance binding cycle from weeks to minutes — from vessel photo to calculated premium.",
     date: "2025-03-05",
+    dateModified: "2026-05-01",
     category: "InsurTech",
     keywords: ["instant vessel insurance", "marine insurance automation", "ship photo to policy"],
     image:

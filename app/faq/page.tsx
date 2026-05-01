@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   description:
     "Common questions about NUDOS — how AI vessel inspection works, what maritime standards we check, pricing, and availability.",
   alternates: { canonical: "https://www.nudos.app/faq" },
+  openGraph: {
+    title: "FAQ | NUDOS",
+    description:
+      "Common questions about NUDOS — how AI vessel inspection works, what maritime standards we check, pricing, and availability.",
+    images: [
+      {
+        url: "/og?title=FAQ&subtitle=Common%20questions%20about%20NUDOS",
+        width: 1200,
+        height: 630,
+        alt: "NUDOS FAQ",
+      },
+    ],
+  },
 }
 
 export default function FaqPage() {

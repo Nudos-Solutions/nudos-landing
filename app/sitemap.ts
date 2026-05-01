@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next"
+import { glossaryTerms } from "@/content/glossary"
 
 const baseUrl = "https://www.nudos.app"
 
@@ -39,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...servicePages, ...blogPosts]
+  const glossaryPages: MetadataRoute.Sitemap = glossaryTerms.map((term) => ({
+    url: `${baseUrl}/glossary/${term.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.4,
+  }))
+
+  return [...staticPages, ...servicePages, ...blogPosts, ...glossaryPages]
 }

@@ -46,6 +46,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     "@type": "Service",
     name: service.title,
     description: service.metaDescription,
+    url: `https://www.nudos.app/services/${service.slug}`,
     provider: {
       "@type": "Organization",
       name: "NUDOS",
@@ -53,11 +54,28 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     },
   }
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to use ${service.title}`,
+    description: service.metaDescription,
+    step: service.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: step.description,
+    })),
+  }
+
   return (
     <I18nProvider>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <main id="main-content" className="min-h-screen bg-background">
         <Header />

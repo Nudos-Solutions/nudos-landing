@@ -22,7 +22,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">{t.footer.pages}</h4>
-            <nav className="flex flex-col gap-3">
+            <nav aria-label="Footer navigation" className="flex flex-col gap-3">
               {t.footer.pageLinks.map((item, index) => {
                 const sectionIds = ["about", "works", "services", "traction", "vision"]
                 return (

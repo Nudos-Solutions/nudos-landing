@@ -10,6 +10,7 @@ import Services from "@/components/services"
 import DataAdvantage from "@/components/data-advantage"
 import Traction from "@/components/traction"
 import Vision from "@/components/vision"
+import Testimonials from "@/components/testimonials"
 import LatestArticles from "@/components/latest-articles"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
@@ -26,6 +27,7 @@ export default function HomeClient() {
         <Services />
         <DataAdvantage />
         <Traction />
+        <Testimonials />
         <Vision />
         <LatestArticles />
         <ContactSection />

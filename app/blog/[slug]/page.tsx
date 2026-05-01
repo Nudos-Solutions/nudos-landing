@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
       ],
       publishedTime: post.date,
+      modifiedTime: post.dateModified,
     },
     twitter: {
       card: "summary_large_image",
@@ -51,16 +52,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     image: post.image,
     datePublished: post.date,
+    dateModified: post.dateModified,
+    url: `https://www.nudos.app/blog/${post.slug}`,
+    mainEntityOfPage: `https://www.nudos.app/blog/${post.slug}`,
     author: { "@type": "Organization", name: "NUDOS", url: "https://www.nudos.app" },
     publisher: {
       "@type": "Organization",
       name: "NUDOS",
       logo: { "@type": "ImageObject", url: "https://www.nudos.app/images/nudos-logo.svg" },
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".prose h2", ".prose p:first-of-type"],
     },
   }
 

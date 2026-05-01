@@ -170,6 +170,14 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
 ]
 
+export function getGlossaryTermBySlug(slug: string): GlossaryTerm | undefined {
+  return glossaryTerms.find((t) => t.slug === slug)
+}
+
+export function getAllGlossarySlugs(): string[] {
+  return glossaryTerms.map((t) => t.slug)
+}
+
 export function getGlossaryLetters(): string[] {
   const letters = new Set(glossaryTerms.map((t) => t.term[0].toUpperCase()))
   return Array.from(letters).sort()

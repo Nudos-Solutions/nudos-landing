@@ -1,0 +1,11 @@
+/* TEAM */
+Company: NUDOS
+Site: https://www.nudos.app
+Contact: hi@nudos.app
+Location: Montevideo, Uruguay & Miami Beach, FL
+
+/* SITE */
+Framework: Next.js
+Language: TypeScript
+Styling: Tailwind CSS
+Hosting: Vercel

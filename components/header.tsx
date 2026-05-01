@@ -66,7 +66,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -127,7 +127,7 @@ export default function Header() {
 
         {mobileMenuOpen && (
           <div className="md:hidden pt-4 pb-6 mt-2 rounded-lg bg-background/95 backdrop-blur-md px-4">
-            <nav className="flex flex-col gap-4 py-4">
+            <nav aria-label="Mobile navigation" className="flex flex-col gap-4 py-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
