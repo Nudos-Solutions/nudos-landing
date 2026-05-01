@@ -80,13 +80,14 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <div className={`flex items-center gap-3 transition-all duration-300 ${scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100"}`}>
+            <div className={`flex items-center gap-3 transition-all duration-300 ${scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100"}`} aria-hidden={scrolled}>
               <a
                 href="https://www.instagram.com/usenudos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-white transition-colors"
                 aria-label="Instagram"
+                tabIndex={scrolled ? -1 : 0}
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -96,6 +97,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-white transition-colors"
                 aria-label="LinkedIn"
+                tabIndex={scrolled ? -1 : 0}
               >
                 <Linkedin className="h-5 w-5" />
               </a>

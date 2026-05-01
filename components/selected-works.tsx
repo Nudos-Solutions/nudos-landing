@@ -83,7 +83,7 @@ export default function SelectedWorks() {
       <div className="mx-auto max-w-7xl relative">
         <div className="flex items-center gap-2 mb-6">
           <Anchor className="w-5 h-5 text-accent" strokeWidth={2} />
-          <span className="text-sm font-bold uppercase tracking-widest text-foreground/40">{t.works.badge}</span>
+          <span className="text-sm font-bold uppercase tracking-widest text-foreground/60">{t.works.badge}</span>
         </div>
 
         <h2 className="font-serif text-foreground mb-12 lg:mb-16 text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tighter">

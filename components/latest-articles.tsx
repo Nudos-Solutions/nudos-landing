@@ -55,7 +55,7 @@ export default function LatestArticles() {
                 <span className="text-xs font-medium text-foreground/60 bg-secondary px-3 py-1 rounded-full">
                   {article.category}
                 </span>
-                <span className="text-xs text-foreground/50">{article.date}</span>
+                <span className="text-xs text-foreground/60">{article.date}</span>
               </div>
               <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors capitalize">
                 {article.title}

@@ -19,7 +19,7 @@ export default function Vision() {
       <div className="mx-auto max-w-7xl relative">
         <div className="flex items-center gap-2 mb-6">
           <Anchor className="w-5 h-5 text-accent" strokeWidth={2} />
-          <span className="text-sm font-bold uppercase tracking-widest text-foreground/40">
+          <span className="text-sm font-bold uppercase tracking-widest text-foreground/60">
             {t.vision.badge}
           </span>
         </div>

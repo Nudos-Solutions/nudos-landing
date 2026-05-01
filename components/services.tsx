@@ -18,7 +18,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center gap-2 mb-6">
           <Anchor className="w-5 h-5 text-accent" strokeWidth={2} />
-          <span className="text-sm font-bold uppercase tracking-widest text-foreground/40">{t.services.badge}</span>
+          <span className="text-sm font-bold uppercase tracking-widest text-foreground/60">{t.services.badge}</span>
         </div>
 
         <h2 className="font-serif text-foreground mb-16 text-4xl md:text-5xl font-bold leading-tight">
