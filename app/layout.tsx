@@ -64,6 +64,13 @@ export const metadata: Metadata = {
       "Nudos turns vessel data into underwriting decisions. AI-powered inspection, condition scoring, valuation, and premium calculation.",
     images: ["/og-image.jpg"],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION || "",
+    },
+  },
   robots: {
     index: true,
     follow: true,
