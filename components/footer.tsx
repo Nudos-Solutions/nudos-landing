@@ -53,6 +53,18 @@ export default function Footer() {
               >
                 Glossary
               </Link>
+              <Link
+                href="/locations/miami-beach"
+                className="text-sm text-foreground/60 hover:text-accent transition-colors"
+              >
+                Miami Beach
+              </Link>
+              <Link
+                href="/locations/montevideo"
+                className="text-sm text-foreground/60 hover:text-accent transition-colors"
+              >
+                Montevideo
+              </Link>
             </nav>
           </div>
 

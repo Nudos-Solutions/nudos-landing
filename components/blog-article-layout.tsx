@@ -66,7 +66,7 @@ function renderBlock(block: string, i: number) {
 }
 
 export default function BlogArticleLayout({ post }: { post: BlogPost }) {
-  const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2)
+  const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3)
   const headings = extractHeadings(post.content)
 
   return (
@@ -149,6 +149,9 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
               <Link href="/glossary" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
                 Glossary
               </Link>
+              <Link href="/guide" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Complete Guide
+              </Link>
             </div>
           </div>
         </div>
@@ -159,7 +162,7 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
         <section className="py-16 px-6 bg-card mt-16">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-xl font-semibold text-foreground mb-6">More articles</h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group">
                   <div className="rounded-xl overflow-hidden mb-3">

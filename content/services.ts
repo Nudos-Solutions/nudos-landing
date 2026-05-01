@@ -7,6 +7,7 @@ export interface ServicePage {
   problems: { icon: string; title: string; description: string }[]
   steps: { number: string; title: string; description: string }[]
   capabilities: { title: string; description: string }[]
+  faqs: { question: string; answer: string }[]
   relatedServices: string[]
   relatedBlogSlugs: string[]
   keywords: string[]
@@ -75,6 +76,24 @@ export const services: ServicePage[] = [
       { title: "Standardized output", description: "Consistent data format regardless of source" },
       { title: "Audit trail", description: "Every finding timestamped and traceable" },
     ],
+    faqs: [
+      {
+        question: "What types of vessels can NUDOS inspect?",
+        answer: "NUDOS processes imagery for cargo ships, tankers, bulk carriers, container vessels, recreational yachts, and offshore structures. The vision engine adapts zone mapping based on vessel type.",
+      },
+      {
+        question: "Do I need professional photography for the inspection?",
+        answer: "No. The system accepts standard photos from smartphones, drones, or professional cameras. Higher resolution imagery produces more detailed findings, but standard phone cameras are sufficient for a comprehensive inspection.",
+      },
+      {
+        question: "How long does an AI vessel inspection take?",
+        answer: "From image upload to structured inspection report, the process takes minutes — not the weeks required for traditional on-site marine surveys. There is no scheduling, travel, or site visit required.",
+      },
+      {
+        question: "Is the AI inspection accepted by classification societies?",
+        answer: "NUDOS inspection data is structured to align with classification society standards including Lloyd's Register, DNV, Bureau Veritas, and ABS. The output complements traditional surveys with consistent, timestamped data.",
+      },
+    ],
     relatedServices: ["condition-scoring", "vessel-valuation"],
     relatedBlogSlugs: ["computer-vision-hull-inspection"],
     keywords: ["vessel inspection AI", "hull damage detection", "ship condition analysis", "marine visual inspection"],
@@ -140,6 +159,20 @@ export const services: ServicePage[] = [
       { title: "Severity classification", description: "Critical, major, minor, cosmetic damage grades" },
       { title: "Compliance flagging", description: "Automatic alerts for standard violations" },
       { title: "Historical tracking", description: "Track condition changes across inspections" },
+    ],
+    faqs: [
+      {
+        question: "What maritime standards does the scoring engine check against?",
+        answer: "The engine evaluates vessels against 47+ standards including SOLAS (Safety of Life at Sea), MARPOL (Marine Pollution), ABYC (American Boat and Yacht Council), and classification society rules from Lloyd's Register, DNV, Bureau Veritas, and ABS.",
+      },
+      {
+        question: "How is the vessel condition score calculated?",
+        answer: "Each structural component receives an individual score based on damage severity, extent, and type. Component scores are weighted by risk significance — hull integrity weighs more than cosmetic deck condition — and aggregated into a composite vessel score.",
+      },
+      {
+        question: "Can I track vessel condition over time?",
+        answer: "Yes. The scoring system maintains historical records, enabling trend detection across multiple inspections. A declining score flags emerging risk before it becomes a claim.",
+      },
     ],
     relatedServices: ["vessel-inspection", "vessel-valuation"],
     relatedBlogSlugs: ["ai-vessel-condition-scoring"],
@@ -207,6 +240,20 @@ export const services: ServicePage[] = [
       { title: "Audit-ready", description: "Full methodology documentation for every valuation" },
       { title: "Historical baseline", description: "Track value changes over time" },
     ],
+    faqs: [
+      {
+        question: "How does NUDOS determine vessel market value?",
+        answer: "The system cross-references verified condition data with market comparables, depreciation curves, and replacement cost benchmarks. Every valuation includes full methodology documentation for audit purposes.",
+      },
+      {
+        question: "Is the valuation accepted for insurance purposes?",
+        answer: "Yes. NUDOS valuations are generated from structured, verifiable data with complete audit trails. The methodology is transparent and documented, meeting the documentation requirements of insurers, reinsurers, and regulators.",
+      },
+      {
+        question: "How often should vessels be revalued?",
+        answer: "Market conditions, vessel condition, and age all affect value over time. NUDOS supports continuous revaluation as new inspection data enters the system, ensuring agreed values remain aligned with actual vessel condition.",
+      },
+    ],
     relatedServices: ["condition-scoring", "premium-engine"],
     relatedBlogSlugs: ["instant-ship-insurance-premiums"],
     keywords: ["vessel valuation AI", "ship market value", "marine asset appraisal", "vessel worth assessment"],
@@ -273,6 +320,20 @@ export const services: ServicePage[] = [
       { title: "Regulatory ready", description: "Output meets regulatory documentation requirements" },
       { title: "Real-time pricing", description: "Premium generated in minutes, not weeks" },
     ],
+    faqs: [
+      {
+        question: "What is deterministic pricing?",
+        answer: "Deterministic pricing means every variable is named, every weight is documented, and every calculation step is traceable. The same inputs always produce the same premium. Unlike probabilistic ML models, deterministic engines can fully explain their output to regulators and reinsurers.",
+      },
+      {
+        question: "What risk variables does the premium engine consider?",
+        answer: "The engine weighs 12+ variables including vessel condition score, age, type, trading area, claims history, regulatory compliance status, and coverage scope. Each variable is timestamped and stored for audit.",
+      },
+      {
+        question: "How fast are premiums generated?",
+        answer: "From verified condition data to calculated H&M and P&I premiums, the process takes minutes. Traditional manual pricing takes 3 to 6 weeks from submission to quote.",
+      },
+    ],
     relatedServices: ["vessel-valuation", "claims-intelligence"],
     relatedBlogSlugs: ["instant-ship-insurance-premiums"],
     keywords: ["marine insurance pricing", "automated premium calculation", "underwriting engine", "marine premium AI"],
@@ -338,6 +399,20 @@ export const services: ServicePage[] = [
       { title: "Evidence packaging", description: "Ready-to-use claims documentation" },
       { title: "Fraud detection", description: "Flag pre-existing damage in claims submissions" },
       { title: "Historical timeline", description: "Full condition history for every vessel" },
+    ],
+    faqs: [
+      {
+        question: "What is a condition baseline?",
+        answer: "A condition baseline is a timestamped record of the vessel's state at point of bind. It documents hull condition, machinery status, and compliance across all structural zones — providing the reference point for any future claims comparison.",
+      },
+      {
+        question: "How does NUDOS detect pre-existing damage in claims?",
+        answer: "When a claim is filed, the system compares the claimed damage against the stored baseline and any intermediate inspection data. Damage present in the baseline but claimed as new is automatically flagged for review.",
+      },
+      {
+        question: "Does continuous monitoring require new inspections?",
+        answer: "The system ingests new inspection data as it becomes available — whether from scheduled surveys, port inspections, or ad-hoc uploads. Each data point updates the vessel's condition timeline and risk profile.",
+      },
     ],
     relatedServices: ["vessel-inspection", "premium-engine"],
     relatedBlogSlugs: ["computer-vision-hull-inspection"],

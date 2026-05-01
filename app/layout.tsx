@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@usenudos",
+    creator: "@usenudos",
     title: "NUDOS — AI-Powered Marine Insurance Infrastructure",
     description:
       "Nudos turns vessel data into underwriting decisions. AI-powered inspection, condition scoring, valuation, and premium calculation.",

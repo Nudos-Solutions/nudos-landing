@@ -140,6 +140,25 @@ export default function ServicePageLayout({ service }: { service: ServicePage })
         </section>
       )}
 
+      {/* FAQ */}
+      {service.faqs.length > 0 && (
+        <section className="py-16 px-6">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-10">
+              Frequently asked questions
+            </h2>
+            <dl className="space-y-6">
+              {service.faqs.map((faq, i) => (
+                <div key={i} className="bg-card rounded-xl p-6 border border-border">
+                  <dt className="text-lg font-semibold text-foreground mb-2">{faq.question}</dt>
+                  <dd className="text-foreground/60 leading-relaxed">{faq.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="py-16 px-6 bg-card">
         <div className="mx-auto max-w-4xl text-center">
