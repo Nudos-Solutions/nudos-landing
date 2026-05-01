@@ -58,6 +58,7 @@ export default function ContactSection() {
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center rotate-90 scale-150"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-accent/15 to-black/40" />
 

@@ -65,6 +65,7 @@ export default function About() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-card" />
             </div>

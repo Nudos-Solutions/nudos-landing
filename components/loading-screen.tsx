@@ -3,10 +3,17 @@
 import { useEffect, useState } from "react"
 
 export default function LoadingScreen() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
+    const hasVisited = sessionStorage.getItem("nudos-visited")
+    if (!hasVisited) {
+      sessionStorage.setItem("nudos-visited", "1")
+      return
+    }
+
+    setVisible(true)
     const timer = setTimeout(() => {
       setFadeOut(true)
       setTimeout(() => setVisible(false), 600)
