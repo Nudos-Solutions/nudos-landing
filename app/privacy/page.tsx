@@ -1,12 +1,12 @@
-"use client"
+import type { Metadata } from "next"
+import PrivacyClient from "./privacy-client"
 
-import { I18nProvider } from "@/lib/i18n"
-import LegalPage from "@/components/legal-page"
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How NUDOS collects, uses, and protects your personal data. Our commitment to data privacy in marine insurance technology.",
+  alternates: { canonical: "https://www.nudos.app/privacy" },
+}
 
 export default function PrivacyPage() {
-  return (
-    <I18nProvider>
-      <LegalPage policy="privacy" />
-    </I18nProvider>
-  )
+  return <PrivacyClient />
 }
