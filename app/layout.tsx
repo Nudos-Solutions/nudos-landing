@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { DM_Sans, DM_Serif_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import LoadingScreen from "@/components/loading-screen"
-import { OrganizationSchema, SoftwareApplicationSchema } from "@/components/structured-data"
+import { OrganizationSchema, SoftwareApplicationSchema, WebSiteSchema } from "@/components/structured-data"
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -82,8 +82,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
 }
 
@@ -97,9 +100,15 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652499/clean_sailboat_hero_xvq7ba.jpg"
+        />
       </head>
       <body className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased`}>
         <OrganizationSchema />
+        <WebSiteSchema />
         <SoftwareApplicationSchema />
         <LoadingScreen />
         {children}

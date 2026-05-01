@@ -51,6 +51,29 @@ export function OrganizationSchema() {
   )
 }
 
+export function WebSiteSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "NUDOS",
+    url: "https://www.nudos.app",
+    description:
+      "AI-powered marine insurance infrastructure — vessel inspection, condition scoring, valuation, and premium calculation.",
+    publisher: {
+      "@type": "Organization",
+      name: "NUDOS",
+      url: "https://www.nudos.app",
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export function SoftwareApplicationSchema() {
   const schema = {
     "@context": "https://schema.org",
