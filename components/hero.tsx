@@ -149,7 +149,7 @@ export default function Hero() {
         <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652499/clean_sailboat_hero_xvq7ba.jpg"
-            alt="AI Ship Hull Analysis and Maritime Insurance Platform"
+            alt="AI-powered vessel hull analysis for marine insurance underwriting"
             fill
             sizes="100vw"
             className="object-cover object-[center_65%] md:object-[center_70%]"

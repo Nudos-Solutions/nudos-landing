@@ -54,7 +54,7 @@ export default function ContactSection() {
           <div className="relative overflow-hidden rounded-3xl min-h-[400px]">
             <Image
               src="https://res.cloudinary.com/drasbgjxe/image/upload/v1776652504/yacht-aerial_famckg.jpg"
-              alt="Aerial yacht view — Vessel Insurance"
+              alt="Aerial vessel inspection view — AI marine insurance platform"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center rotate-90 scale-150"
@@ -110,7 +110,7 @@ export default function ContactSection() {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/50 mb-2">
+                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/60 mb-2">
                       {t.contact.name}
                     </label>
                     <input
@@ -123,7 +123,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/50 mb-2">
+                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/60 mb-2">
                       {t.contact.email}
                     </label>
                     <input
@@ -136,7 +136,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/50 mb-2">
+                    <label className="block text-xs uppercase tracking-wider font-semibold text-foreground/60 mb-2">
                       {t.contact.message}
                     </label>
                     <textarea

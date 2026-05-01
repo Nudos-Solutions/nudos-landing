@@ -27,7 +27,7 @@ export default function About() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Anchor className="w-5 h-5 text-accent" strokeWidth={2} />
-              <span className="text-sm font-bold uppercase tracking-widest text-foreground/40">{t.about.badge}</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-foreground/60">{t.about.badge}</span>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-serif font-black text-foreground leading-tight tracking-tighter text-balance">
@@ -61,7 +61,7 @@ export default function About() {
             <div className="relative w-full h-48 overflow-hidden">
               <Image
                 src="https://res.cloudinary.com/drasbgjxe/image/upload/v1776652502/market-value_tkoy3h.jpg"
-                alt="Vessel underwriting — the unseen risk"
+                alt="Marine insurance underwriting gap — vessel condition invisible to insurers"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -90,7 +90,7 @@ export default function About() {
                       <p className="text-2xl font-serif font-bold text-accent leading-none mb-1">
                         {stat.value}
                       </p>
-                      <p className="text-[10px] uppercase tracking-widest font-bold text-foreground/50 leading-tight">
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-foreground/60 leading-tight">
                         {stat.label}
                       </p>
                     </div>
