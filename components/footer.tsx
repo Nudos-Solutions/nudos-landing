@@ -35,6 +35,24 @@ export default function Footer() {
                   </Link>
                 )
               })}
+              <Link
+                href="/blog"
+                className="text-sm text-foreground/60 hover:text-accent transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/faq"
+                className="text-sm text-foreground/60 hover:text-accent transition-colors"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/glossary"
+                className="text-sm text-foreground/60 hover:text-accent transition-colors"
+              >
+                Glossary
+              </Link>
             </nav>
           </div>
 
@@ -100,15 +118,15 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-foreground/50">{t.footer.copyright}</p>
+          <p className="text-sm text-foreground/60">{t.footer.copyright}</p>
           <div className="flex items-center gap-6">
-            <Link href="/terms" className="text-sm text-foreground/50 hover:text-accent transition-colors">
+            <Link href="/terms" className="text-sm text-foreground/60 hover:text-accent transition-colors">
               {t.footer.terms}
             </Link>
-            <Link href="/privacy" className="text-sm text-foreground/50 hover:text-accent transition-colors">
+            <Link href="/privacy" className="text-sm text-foreground/60 hover:text-accent transition-colors">
               {t.footer.privacy}
             </Link>
-            <Link href="/cookies" className="text-sm text-foreground/50 hover:text-accent transition-colors">
+            <Link href="/cookies" className="text-sm text-foreground/60 hover:text-accent transition-colors">
               {t.footer.cookies}
             </Link>
           </div>
