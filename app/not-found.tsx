@@ -15,7 +15,7 @@ export default function NotFound() {
         <p className="text-xl text-foreground/60 mb-8">
           This page drifted off course. Let&apos;s get you back on track.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <Link
             href="/"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:brightness-110 transition-all"
@@ -29,6 +29,21 @@ export default function NotFound() {
           >
             Read Blog
           </Link>
+        </div>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Link href="/guide" className="text-xs text-foreground/40 hover:text-accent transition-colors">Guide</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/services/vessel-inspection" className="text-xs text-foreground/40 hover:text-accent transition-colors">Vessel Inspection</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/services/condition-scoring" className="text-xs text-foreground/40 hover:text-accent transition-colors">Condition Scoring</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/services/premium-engine" className="text-xs text-foreground/40 hover:text-accent transition-colors">Premium Engine</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/faq" className="text-xs text-foreground/40 hover:text-accent transition-colors">FAQ</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/glossary" className="text-xs text-foreground/40 hover:text-accent transition-colors">Glossary</Link>
+          <span className="text-foreground/20">·</span>
+          <Link href="/about" className="text-xs text-foreground/40 hover:text-accent transition-colors">About</Link>
         </div>
       </div>
     </main>

@@ -47,11 +47,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     name: service.title,
     description: service.metaDescription,
     url: `https://www.nudos.app/services/${service.slug}`,
-    provider: {
-      "@type": "Organization",
-      name: "NUDOS",
-      url: "https://www.nudos.app",
-    },
+    provider: { "@id": "https://www.nudos.app/#organization" },
   }
 
   const faqSchema = {

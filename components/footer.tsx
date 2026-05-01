@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="text-2xl font-bold text-foreground">
               NUDOS
@@ -35,36 +35,20 @@ export default function Footer() {
                   </Link>
                 )
               })}
-              <Link
-                href="/blog"
-                className="text-sm text-foreground/60 hover:text-accent transition-colors"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/faq"
-                className="text-sm text-foreground/60 hover:text-accent transition-colors"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/glossary"
-                className="text-sm text-foreground/60 hover:text-accent transition-colors"
-              >
-                Glossary
-              </Link>
-              <Link
-                href="/locations/miami-beach"
-                className="text-sm text-foreground/60 hover:text-accent transition-colors"
-              >
-                Miami Beach
-              </Link>
-              <Link
-                href="/locations/montevideo"
-                className="text-sm text-foreground/60 hover:text-accent transition-colors"
-              >
-                Montevideo
-              </Link>
+            </nav>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Resources</h4>
+            <nav aria-label="Resources navigation" className="flex flex-col gap-3">
+              <Link href="/blog" className="text-sm text-foreground/60 hover:text-accent transition-colors">Blog</Link>
+              <Link href="/guide" className="text-sm text-foreground/60 hover:text-accent transition-colors">Guide</Link>
+              <Link href="/faq" className="text-sm text-foreground/60 hover:text-accent transition-colors">FAQ</Link>
+              <Link href="/glossary" className="text-sm text-foreground/60 hover:text-accent transition-colors">Glossary</Link>
+              <Link href="/about" className="text-sm text-foreground/60 hover:text-accent transition-colors">About</Link>
+              <Link href="/press" className="text-sm text-foreground/60 hover:text-accent transition-colors">Press</Link>
+              <Link href="/locations/miami-beach" className="text-sm text-foreground/60 hover:text-accent transition-colors">Miami Beach</Link>
+              <Link href="/locations/montevideo" className="text-sm text-foreground/60 hover:text-accent transition-colors">Montevideo</Link>
             </nav>
           </div>
 

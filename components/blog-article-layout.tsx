@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Linkedin, Link2, Share2 } from "lucide-react"
 import { type BlogPost, blogPosts } from "@/content/blog"
 
 function extractHeadings(content: string[]): { id: string; text: string }[] {
@@ -94,6 +94,11 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
             <time dateTime={post.date} className="text-xs text-foreground/50">
               {post.date}
             </time>
+            {post.dateModified !== post.date && (
+              <span className="text-xs text-foreground/50">
+                Updated <time dateTime={post.dateModified}>{post.dateModified}</time>
+              </span>
+            )}
             <span className="text-xs text-foreground/50">{post.readTime}</span>
           </div>
 
@@ -122,6 +127,36 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
 
           <div className="prose prose-lg max-w-none">
             {post.content.map((block, i) => renderBlock(block, i))}
+          </div>
+
+          {/* Share buttons */}
+          <div className="mt-10 flex items-center gap-3">
+            <span className="text-xs font-semibold text-foreground/50 uppercase tracking-wider">Share</span>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.nudos.app/blog/${post.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-card border border-border flex items-center justify-center text-foreground/50 hover:text-accent hover:border-accent/30 transition-colors"
+              aria-label="Share on LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://www.nudos.app/blog/${post.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-card border border-border flex items-center justify-center text-foreground/50 hover:text-accent hover:border-accent/30 transition-colors"
+              aria-label="Share on X"
+            >
+              <Share2 className="h-4 w-4" />
+            </a>
+            <button
+              onClick={() => { navigator.clipboard.writeText(`https://www.nudos.app/blog/${post.slug}`); }}
+              className="w-9 h-9 rounded-lg bg-card border border-border flex items-center justify-center text-foreground/50 hover:text-accent hover:border-accent/30 transition-colors"
+              aria-label="Copy link"
+            >
+              <Link2 className="h-4 w-4" />
+            </button>
           </div>
 
           {/* Internal links to services */}

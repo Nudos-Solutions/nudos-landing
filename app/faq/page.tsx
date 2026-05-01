@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 import { I18nProvider } from "@/lib/i18n"
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Marine Insurance FAQ — Common Questions About NUDOS",
   description:
     "Common questions about NUDOS — how AI vessel inspection works, what maritime standards we check, pricing, and availability.",
   alternates: { canonical: "https://www.nudos.app/faq" },

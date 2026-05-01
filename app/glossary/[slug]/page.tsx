@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { BookOpen, ArrowLeft } from "lucide-react"
 import { getGlossaryTermBySlug, getAllGlossarySlugs } from "@/content/glossary"
 import BreadcrumbNav from "@/components/breadcrumb-nav"
+import GlossaryDefinition from "@/components/glossary-definition"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { I18nProvider } from "@/lib/i18n"
@@ -82,7 +83,7 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
             </h1>
 
             <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-              {term.definition}
+              <GlossaryDefinition definition={term.definition} currentSlug={term.slug} />
             </p>
 
             {term.relatedService && (

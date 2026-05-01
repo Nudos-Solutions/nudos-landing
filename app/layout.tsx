@@ -77,11 +77,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.nudos.app",
-    languages: {
-      en: "https://www.nudos.app",
-      es: "https://www.nudos.app",
-      "x-default": "https://www.nudos.app",
-    },
   },
   icons: {
     icon: [
@@ -104,6 +99,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#1f6aff" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
         <link
           rel="preload"
           as="image"

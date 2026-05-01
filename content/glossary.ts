@@ -170,6 +170,39 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
 ]
 
+// Map of phrases to slugs for cross-linking within definitions
+export const glossaryCrossLinks: { phrase: string; slug: string }[] = [
+  { phrase: "SOLAS", slug: "solas" },
+  { phrase: "MARPOL", slug: "marpol" },
+  { phrase: "ABYC", slug: "abyc" },
+  { phrase: "P&I", slug: "protection-and-indemnity" },
+  { phrase: "H&M", slug: "hull-and-machinery" },
+  { phrase: "Hull & Machinery", slug: "hull-and-machinery" },
+  { phrase: "Protection & Indemnity", slug: "protection-and-indemnity" },
+  { phrase: "general average", slug: "general-average" },
+  { phrase: "General Average", slug: "general-average" },
+  { phrase: "total loss", slug: "total-loss" },
+  { phrase: "constructive total loss", slug: "constructive-total-loss" },
+  { phrase: "actual total loss", slug: "actual-total-loss" },
+  { phrase: "salvage", slug: "salvage" },
+  { phrase: "subrogation", slug: "subrogation" },
+  { phrase: "jettison", slug: "jettison" },
+  { phrase: "indemnity", slug: "indemnity" },
+  { phrase: "classification society", slug: "classification-society" },
+  { phrase: "classification societies", slug: "classification-society" },
+  { phrase: "marine survey", slug: "marine-survey" },
+  { phrase: "premium", slug: "premium" },
+  { phrase: "deductible", slug: "deductible" },
+  { phrase: "underwriting", slug: "underwriting" },
+  { phrase: "insurable interest", slug: "insurable-interest" },
+  { phrase: "utmost good faith", slug: "utmost-good-faith" },
+  { phrase: "average adjuster", slug: "average-adjuster" },
+  { phrase: "particular average", slug: "particular-average" },
+  { phrase: "proximate cause", slug: "proximate-cause" },
+  { phrase: "club call", slug: "club-call" },
+  { phrase: "bottomry", slug: "bottomry" },
+]
+
 export function getGlossaryTermBySlug(slug: string): GlossaryTerm | undefined {
   return glossaryTerms.find((t) => t.slug === slug)
 }

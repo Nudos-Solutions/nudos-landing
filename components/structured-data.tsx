@@ -2,10 +2,19 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.nudos.app/#organization",
     name: "NUDOS",
     url: "https://www.nudos.app",
-    logo: "https://www.nudos.app/images/nudos-logo.svg",
+    logo: {
+      "@type": "ImageObject",
+      "@id": "https://www.nudos.app/#logo",
+      url: "https://www.nudos.app/images/nudos-logo.svg",
+      contentUrl: "https://www.nudos.app/images/nudos-logo.svg",
+      caption: "NUDOS",
+    },
+    image: { "@id": "https://www.nudos.app/#logo" },
     description: "AI-powered marine insurance infrastructure",
+    foundingDate: "2024",
     sameAs: [
       "https://www.instagram.com/usenudos",
       "https://www.linkedin.com/company/nudos-app",
@@ -122,15 +131,13 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://www.nudos.app/#website",
     name: "NUDOS",
     url: "https://www.nudos.app",
     description:
       "AI-powered marine insurance infrastructure — vessel inspection, condition scoring, valuation, and premium calculation.",
-    publisher: {
-      "@type": "Organization",
-      name: "NUDOS",
-      url: "https://www.nudos.app",
-    },
+    publisher: { "@id": "https://www.nudos.app/#organization" },
+    inLanguage: ["en", "es"],
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -176,9 +183,11 @@ export function SoftwareApplicationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": "https://www.nudos.app/#software",
     name: "NUDOS",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
+    author: { "@id": "https://www.nudos.app/#organization" },
     description:
       "AI-powered marine insurance infrastructure — vessel inspection, condition scoring, valuation, and premium calculation.",
     offers: {
@@ -186,12 +195,6 @@ export function SoftwareApplicationSchema() {
       price: "0",
       priceCurrency: "USD",
       description: "Contact for pricing",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "4",
-      bestRating: "5",
     },
   }
 

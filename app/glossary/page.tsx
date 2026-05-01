@@ -3,6 +3,7 @@ import Link from "next/link"
 import { BookOpen } from "lucide-react"
 import { glossaryTerms, getGlossaryLetters, getTermsByLetter } from "@/content/glossary"
 import BreadcrumbNav from "@/components/breadcrumb-nav"
+import GlossaryDefinition from "@/components/glossary-definition"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { I18nProvider } from "@/lib/i18n"
@@ -90,7 +91,7 @@ export default function GlossaryPage() {
                     <div key={term.slug} id={term.slug} className="scroll-mt-32">
                       <dt className="text-lg font-semibold text-foreground mb-1">{term.term}</dt>
                       <dd className="text-foreground/60 leading-relaxed">
-                        {term.definition}
+                        <GlossaryDefinition definition={term.definition} currentSlug={term.slug} />
                         {term.relatedService && (
                           <>
                             {" "}

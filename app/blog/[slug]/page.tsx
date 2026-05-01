@@ -45,7 +45,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       creator: "@usenudos",
       title: post.title,
       description: post.description,
-      images: [post.image],
+      images: [
+        {
+          url: `/og?title=${encodeURIComponent(post.title)}&subtitle=${encodeURIComponent(post.description)}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   }
 }
@@ -65,12 +72,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     dateModified: post.dateModified,
     url: `https://www.nudos.app/blog/${post.slug}`,
     mainEntityOfPage: `https://www.nudos.app/blog/${post.slug}`,
-    author: { "@type": "Organization", name: "NUDOS", url: "https://www.nudos.app" },
-    publisher: {
-      "@type": "Organization",
-      name: "NUDOS",
-      logo: { "@type": "ImageObject", url: "https://www.nudos.app/images/nudos-logo.svg" },
-    },
+    author: { "@id": "https://www.nudos.app/#organization" },
+    publisher: { "@id": "https://www.nudos.app/#organization" },
+    isPartOf: { "@id": "https://www.nudos.app/#website" },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".prose h2", ".prose p:first-of-type"],

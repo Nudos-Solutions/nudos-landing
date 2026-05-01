@@ -7,7 +7,7 @@ import Footer from "@/components/footer"
 import { I18nProvider } from "@/lib/i18n"
 
 export const metadata: Metadata = {
-  title: "The Complete Guide to AI-Powered Marine Insurance",
+  title: "AI Marine Insurance Guide — Inspection, Scoring & Pricing",
   description:
     "Everything you need to know about how AI is transforming marine insurance — from vessel inspection and condition scoring to automated premium calculation and claims intelligence.",
   alternates: { canonical: "https://www.nudos.app/guide" },
