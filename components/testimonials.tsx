@@ -74,6 +74,7 @@ export default function Testimonials() {
                   width={56}
                   height={56}
                   className="rounded-full"
+                  loading="lazy"
                 />
                 <div>
                   <p className="font-medium text-foreground">{testimonial.author}</p>

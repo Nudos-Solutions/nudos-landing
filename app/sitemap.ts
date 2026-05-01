@@ -40,6 +40,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: "general-average-explained", date: "2025-04-22" },
     { slug: "hull-and-machinery-insurance-guide", date: "2025-05-01" },
     { slug: "marine-insurance-claims-process", date: "2025-05-15" },
+    { slug: "pi-insurance-explained", date: "2025-06-01" },
+    { slug: "marpol-compliance-checklist", date: "2025-06-15" },
+    { slug: "vessel-depreciation-insurance-premiums", date: "2025-07-01" },
+    { slug: "caribbean-yacht-insurance", date: "2025-07-15" },
+    { slug: "marine-insurance-latin-america", date: "2025-08-01" },
   ].map(({ slug, date }) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: date,

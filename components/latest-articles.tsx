@@ -49,6 +49,7 @@ export default function LatestArticles() {
                   width={400}
                   height={250}
                   className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="flex items-center gap-4 mb-3">

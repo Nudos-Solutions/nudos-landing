@@ -50,6 +50,13 @@ const nextConfig = {
         ],
       },
       {
+        source: "/embed/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "" },
+          { key: "Content-Security-Policy", value: "frame-ancestors *;" },
+        ],
+      },
+      {
         source: "/(.*)\\.svg",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
