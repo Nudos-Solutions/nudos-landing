@@ -17,7 +17,7 @@ import Footer from "@/components/footer"
 export default function HomeClient() {
   return (
     <I18nProvider>
-      <main className="min-h-screen bg-background">
+      <main id="main-content" className="min-h-screen bg-background">
         <Header />
         <Hero />
         <About />

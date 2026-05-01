@@ -5,8 +5,69 @@ import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import { type BlogPost, blogPosts } from "@/content/blog"
 
+function extractHeadings(content: string[]): { id: string; text: string }[] {
+  return content
+    .filter((block) => block.startsWith("## "))
+    .map((block) => {
+      const text = block.replace("## ", "")
+      const id = text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "")
+      return { id, text }
+    })
+}
+
+function renderBlock(block: string, i: number) {
+  if (block.startsWith("## ")) {
+    const text = block.replace("## ", "")
+    const id = text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "")
+    return (
+      <h2 key={i} id={id} className="text-2xl font-serif font-bold text-foreground mt-10 mb-4 scroll-mt-24">
+        {text}
+      </h2>
+    )
+  }
+  if (block.startsWith("**") && block.endsWith("**")) {
+    return (
+      <p key={i} className="text-foreground font-semibold mt-4 mb-2">
+        {block.replace(/\*\*/g, "")}
+      </p>
+    )
+  }
+  if (block.startsWith("**")) {
+    const parts = block.split("**")
+    return (
+      <p key={i} className="text-foreground/70 leading-relaxed mb-4">
+        <strong className="text-foreground">{parts[1]}</strong>
+        {parts[2]}
+      </p>
+    )
+  }
+  if (block.startsWith("- ")) {
+    return (
+      <ul key={i} className="list-disc pl-6 mb-4 space-y-1">
+        {block.split("\n").map((line, j) => (
+          <li key={j} className="text-foreground/70">
+            {line.replace("- ", "")}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  return (
+    <p key={i} className="text-foreground/70 leading-relaxed mb-4">
+      {block}
+    </p>
+  )
+}
+
 export default function BlogArticleLayout({ post }: { post: BlogPost }) {
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2)
+  const headings = extractHeadings(post.content)
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,7 +91,9 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
             <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
               {post.category}
             </span>
-            <span className="text-xs text-foreground/50">{post.date}</span>
+            <time dateTime={post.date} className="text-xs text-foreground/50">
+              {post.date}
+            </time>
             <span className="text-xs text-foreground/50">{post.readTime}</span>
           </div>
 
@@ -38,48 +101,55 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
             {post.title}
           </h1>
 
+          {/* Table of Contents */}
+          {headings.length > 2 && (
+            <nav aria-label="Table of contents" className="mb-10 p-5 bg-card rounded-xl border border-border">
+              <p className="text-sm font-semibold text-foreground mb-3">In this article</p>
+              <ol className="space-y-2">
+                {headings.map((h) => (
+                  <li key={h.id}>
+                    <a
+                      href={`#${h.id}`}
+                      className="text-sm text-foreground/50 hover:text-accent transition-colors"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
           <div className="prose prose-lg max-w-none">
-            {post.content.map((block, i) => {
-              if (block.startsWith("## ")) {
-                return (
-                  <h2 key={i} className="text-2xl font-serif font-bold text-foreground mt-10 mb-4">
-                    {block.replace("## ", "")}
-                  </h2>
-                )
-              }
-              if (block.startsWith("**") && block.endsWith("**")) {
-                return (
-                  <p key={i} className="text-foreground font-semibold mt-4 mb-2">
-                    {block.replace(/\*\*/g, "")}
-                  </p>
-                )
-              }
-              if (block.startsWith("**")) {
-                const parts = block.split("**")
-                return (
-                  <p key={i} className="text-foreground/70 leading-relaxed mb-4">
-                    <strong className="text-foreground">{parts[1]}</strong>
-                    {parts[2]}
-                  </p>
-                )
-              }
-              if (block.startsWith("- ")) {
-                return (
-                  <ul key={i} className="list-disc pl-6 mb-4 space-y-1">
-                    {block.split("\n").map((line, j) => (
-                      <li key={j} className="text-foreground/70">
-                        {line.replace("- ", "")}
-                      </li>
-                    ))}
-                  </ul>
-                )
-              }
-              return (
-                <p key={i} className="text-foreground/70 leading-relaxed mb-4">
-                  {block}
-                </p>
-              )
-            })}
+            {post.content.map((block, i) => renderBlock(block, i))}
+          </div>
+
+          {/* Internal links to services */}
+          <div className="mt-12 p-6 bg-card rounded-xl border border-border">
+            <p className="text-sm font-semibold text-foreground mb-3">Explore NUDOS</p>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/services/vessel-inspection" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Vessel Inspection AI
+              </Link>
+              <Link href="/services/condition-scoring" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Condition Scoring
+              </Link>
+              <Link href="/services/vessel-valuation" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Vessel Valuation
+              </Link>
+              <Link href="/services/premium-engine" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Premium Engine
+              </Link>
+              <Link href="/services/claims-intelligence" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Claims Intelligence
+              </Link>
+              <Link href="/faq" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                FAQ
+              </Link>
+              <Link href="/glossary" className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full hover:bg-accent/20 transition-colors">
+                Glossary
+              </Link>
+            </div>
           </div>
         </div>
       </article>
@@ -99,6 +169,7 @@ export default function BlogArticleLayout({ post }: { post: BlogPost }) {
                       width={400}
                       height={220}
                       className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                   </div>
                   <p className="text-xs text-foreground/50 mb-1">{rp.category} · {rp.readTime}</p>

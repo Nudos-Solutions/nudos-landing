@@ -30,7 +30,7 @@ export default function GlossaryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchemas) }}
       />
-      <main className="min-h-screen bg-background">
+      <main id="main-content" className="min-h-screen bg-background">
         <Header />
         <section className="pt-32 pb-20 px-6">
           <div className="mx-auto max-w-3xl">

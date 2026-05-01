@@ -16,9 +16,24 @@ export const metadata: Metadata = {
 }
 
 export default function BlogIndex() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: blogPosts.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://www.nudos.app/blog/${post.slug}`,
+      name: post.title,
+    })),
+  }
+
   return (
     <I18nProvider>
-      <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <main id="main-content" className="min-h-screen bg-background">
         <Header />
         <section className="pt-32 pb-20 px-6">
           <div className="mx-auto max-w-7xl">

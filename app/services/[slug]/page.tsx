@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: service.metaDescription,
       images: [
         {
-          url: "/og-image.jpg",
+          url: `/og?title=${encodeURIComponent(service.h1)}&subtitle=${encodeURIComponent(service.metaDescription)}`,
           width: 1200,
           height: 630,
           alt: `${service.title} — NUDOS`,
@@ -59,7 +59,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <main className="min-h-screen bg-background">
+      <main id="main-content" className="min-h-screen bg-background">
         <Header />
         <div className="pt-24 px-6">
           <div className="mx-auto max-w-4xl">

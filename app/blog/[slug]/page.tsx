@@ -25,7 +25,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       title: post.title,
       description: post.description,
-      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
+      images: [
+        {
+          url: `/og?title=${encodeURIComponent(post.title)}&subtitle=${encodeURIComponent(post.description)}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
       publishedTime: post.date,
     },
     twitter: {
@@ -63,7 +70,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <main className="min-h-screen bg-background">
+      <main id="main-content" className="min-h-screen bg-background">
         <Header />
         <div className="pt-24 px-6">
           <div className="mx-auto max-w-3xl">
