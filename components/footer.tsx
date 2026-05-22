@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
@@ -18,6 +19,13 @@ export default function Footer() {
             <p className="mt-4 text-sm text-foreground/60 leading-relaxed">
               {t.footer.tagline}
             </p>
+            <Image
+              src="/aiu-logo.svg"
+              alt="AIU logo"
+              width={120}
+              height={60}
+              className="mt-4"
+            />
           </div>
 
           <div>
