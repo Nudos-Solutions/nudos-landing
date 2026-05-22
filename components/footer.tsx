@@ -19,13 +19,19 @@ export default function Footer() {
             <p className="mt-4 text-sm text-foreground/60 leading-relaxed">
               {t.footer.tagline}
             </p>
-            <Image
-              src="/aiu-logo.svg"
-              alt="AIU logo"
-              width={120}
-              height={60}
-              className="mt-4"
-            />
+            <div className="mt-6 flex items-center gap-3">
+              <Image
+                src="/aiu-logo.svg"
+                alt="Asociación Insurtech Uruguay logo"
+                width={80}
+                height={40}
+                className="shrink-0"
+              />
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-foreground/40">Membership</p>
+                <p className="text-xs text-foreground/60">Asociación Insurtech Uruguay</p>
+              </div>
+            </div>
           </div>
 
           <div>
