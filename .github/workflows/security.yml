@@ -1,0 +1,16 @@
+name: Security
+
+on:
+  pull_request:
+    branches: [main, development]
+  push:
+    branches: [main, development]
+
+jobs:
+  sast:
+    uses: NudosApp/nudos-secops/.github/workflows/semgrep.yml@main
+  secrets:
+    uses: NudosApp/nudos-secops/.github/workflows/gitleaks.yml@main
+  dependency-review:
+    if: github.event_name == 'pull_request'
+    uses: NudosApp/nudos-secops/.github/workflows/dependency-review.yml@main
