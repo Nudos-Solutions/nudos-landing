@@ -6,3 +6,4 @@ node_modules/
 docs/superpowers
 .vercel
 .env*.local
+.DS_Store
