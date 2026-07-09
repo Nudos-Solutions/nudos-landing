@@ -8,8 +8,8 @@ import { useI18n } from "@/lib/i18n"
 const workImages = [
   "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652502/market-value_tkoy3h.jpg",             // 1 — Recreational (sailboat)
   "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652502/modern_cargo_ship_side_xokp7n.jpg",   // 2 — Cargo
-  "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652503/recreational-motorboat_lxd1ym.jpg",   // 3 — Recreational (motorboat)
-  "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652498/cargo-tanker-stage_ago2hm.jpg",       // 4 — Cargo (tanker)
+  "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652498/cargo-tanker-stage_ago2hm.jpg",       // 3 — Cargo (tanker) — Decide
+  "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652503/recreational-motorboat_lxd1ym.jpg",   // 4 — Recreational (motorboat) — Value
   "https://res.cloudinary.com/drasbgjxe/image/upload/q_auto/f_auto/v1776652503/pwc-watercraft_bwz1dj.jpg",           // 5 — Recreational (PWC)
 ]
 
@@ -24,20 +24,20 @@ const workOverlays = [
   // Stage 02 — Understand
   {
     tl: { icon: <CheckCircle className="w-4 h-4 text-emerald-400" />, label: "Condition score", value: "8.4 / 10", color: "border-emerald-400/40" },
-    tr: { icon: <Ship className="w-4 h-4 text-cyan-400" />, label: "Standards checked", value: "47+", color: "border-cyan-400/40" },
+    tr: { icon: <Ship className="w-4 h-4 text-cyan-400" />, label: "Standards checked", value: "27+", color: "border-cyan-400/40" },
     bl: { icon: <Gauge className="w-4 h-4 text-accent" />, label: "Compliance", value: "SOLAS · MARPOL", color: "border-accent/40" },
   },
-  // Stage 03 — Value (Recreational)
-  {
-    tl: { icon: <CheckCircle className="w-4 h-4 text-emerald-400" />, label: "Market value", value: "$284,000", color: "border-emerald-400/40" },
-    tr: { icon: <Ship className="w-4 h-4 text-cyan-400" />, label: "Hull score", value: "9.1 / 10", color: "border-cyan-400/40" },
-    bl: { icon: <Gauge className="w-4 h-4 text-accent" />, label: "Comparables", value: "12 matched", color: "border-accent/40" },
-  },
-  // Stage 04 — Decide
+  // Stage 03 — Decide
   {
     tl: { icon: <CheckCircle className="w-4 h-4 text-emerald-400" />, label: "Premium output", value: "$4,200 / yr", color: "border-emerald-400/40" },
     tr: { icon: <Ship className="w-4 h-4 text-cyan-400" />, label: "Variables weighted", value: "12", color: "border-cyan-400/40" },
     bl: { icon: <Gauge className="w-4 h-4 text-accent" />, label: "Audit trail", value: "Complete", color: "border-accent/40" },
+  },
+  // Stage 04 — Value (Recreational)
+  {
+    tl: { icon: <CheckCircle className="w-4 h-4 text-emerald-400" />, label: "Market value", value: "$284,000", color: "border-emerald-400/40" },
+    tr: { icon: <Ship className="w-4 h-4 text-cyan-400" />, label: "Hull score", value: "9.1 / 10", color: "border-cyan-400/40" },
+    bl: { icon: <Gauge className="w-4 h-4 text-accent" />, label: "Comparables", value: "12 matched", color: "border-accent/40" },
   },
   // Stage 05 — Monitor
   {

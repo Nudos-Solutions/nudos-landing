@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-vessel-condition-scoring",
     title: "Vessel condition scoring: how AI outperforms traditional maritime surveys",
     description:
-      "Discover how automated vessel condition scoring delivers consistent, repeatable assessments against 47+ maritime standards — eliminating survey subjectivity.",
+      "Discover how automated vessel condition scoring delivers consistent, repeatable assessments against 27+ maritime standards — eliminating survey subjectivity.",
     date: "2025-03-05",
     dateModified: "2026-05-01",
     category: "Maritime AI",
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
       "**Component Level:** Every structural component — hull plating, deck surfaces, coating systems, through-hulls, machinery mounts — receives an individual condition score. The score reflects the severity, extent, and type of damage detected, measured against defined thresholds.",
       "**Standard Level:** Each component score is checked against relevant maritime standards. SOLAS structural requirements, MARPOL environmental compliance, ABYC recreational vessel standards, and classification society rules each define what constitutes acceptable condition for specific components.",
       "**Vessel Level:** Component scores aggregate into a composite vessel condition score. The aggregation is weighted — hull integrity carries more weight than cosmetic deck condition, for example — reflecting the actual risk hierarchy.",
-      "## 47+ Standards, One Assessment",
+      "## 27+ Standards, One Assessment",
       "The scale of the compliance challenge in maritime insurance is often underestimated. A single vessel may need to comply with:",
       "- **SOLAS** (Safety of Life at Sea) — structural integrity, fire safety, life-saving equipment\n- **MARPOL** (Marine Pollution) — environmental compliance, discharge systems, fuel containment\n- **ABYC** (American Boat and Yacht Council) — electrical systems, fuel systems, ventilation\n- **Classification society rules** — Lloyd's, DNV, Bureau Veritas, ABS — each with their own structural standards\n- **Flag state requirements** — varying by registration jurisdiction",
       "Checking a vessel against all applicable standards manually is a multi-day exercise. Automated scoring runs the full compliance check in minutes, flagging specific violations with references to the relevant standard clause.",

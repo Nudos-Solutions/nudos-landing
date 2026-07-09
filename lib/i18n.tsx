@@ -73,7 +73,7 @@ const translations = {
         },
         {
           label: "Structured Data",
-          detail: "Condition scores, valuations, and compliance checks mapped against 47+ international standards.",
+          detail: "Condition scores, valuations, and compliance checks mapped against 27+ international standards.",
         },
         {
           label: "Underwriting Decisions",
@@ -98,22 +98,22 @@ const translations = {
           eyebrow: "Stage 02 — Understand",
           title: "Score the condition.",
           description:
-            "The platform translates visual findings into structured condition data. Every component is scored against SOLAS, MARPOL, ABYC, and 47+ maritime standards. The output is consistent regardless of who uploads the data.",
+            "The platform translates visual findings into structured condition data. Every component is scored against SOLAS, MARPOL, ABYC, and 27+ maritime standards. The output is consistent regardless of who uploads the data.",
           features: ["Condition Scoring", "Standard Compliance", "Consistency"],
         },
         {
-          eyebrow: "Stage 03 — Value",
+          eyebrow: "Stage 03 — Decide",
+          title: "Price with full traceability.",
+          description:
+            "Condition and valuation data flow into our deterministic pricing engine. The output: H&M premiums where every variable is named, weighted, and timestamped. Same inputs, same output, every time. Built for audit, built for the line.",
+          features: ["Premium Engine", "Risk Weighting", "Audit Trail"],
+        },
+        {
+          eyebrow: "Stage 04 — Value",
           title: "Determine what it's worth.",
           description:
             "The system cross-references condition data with market comparables, depreciation curves, and replacement cost benchmarks. The output: a defensible vessel valuation. No guesswork. No broker estimates.",
           features: ["Market Valuation", "Depreciation Curves", "Comparable Analysis"],
-        },
-        {
-          eyebrow: "Stage 04 — Decide",
-          title: "Price with full traceability.",
-          description:
-            "Condition and valuation data flow into our deterministic pricing engine. The output: H&M and P&I premiums where every variable is named, weighted, and timestamped. Same inputs, same output, every time. Built for audit, built for the line.",
-          features: ["Premium Engine", "Risk Weighting", "Audit Trail"],
         },
         {
           eyebrow: "Stage 05 — Monitor",
@@ -159,7 +159,7 @@ const translations = {
       metrics: [
         { label: "Vessel profiles in system", value: "Growing" },
         { label: "Condition datapoints per vessel", value: "200+" },
-        { label: "Maritime standards mapped", value: "47+" },
+        { label: "Maritime standards mapped", value: "27+" },
         { label: "Premium accuracy improvement", value: "Continuous" },
       ],
       anchor: "This isn't a feature. It's a moat.",
@@ -236,7 +236,7 @@ const translations = {
         "Processing vessel data across global maritime routes. Building the connective tissue between physical assets and financial decisions.",
       cta: "Talk to Us",
       items: [
-        { label: "Standards Mapped", value: "47+" },
+        { label: "Standards Mapped", value: "27+" },
         { label: "Structural Zones Scored", value: "7" },
         { label: "Pricing Variables", value: "200+" },
         { label: "Integration Partners", value: "6+" },
@@ -555,7 +555,7 @@ const translations = {
       cardDescription:
         "Los suscriptores marítimos toman decisiones millonarias basándose en informes PDF y llamadas telefónicas. La industria no tiene una forma unificada y repetible de conectar cómo se ve una embarcación con cuánto debería costar asegurarla.",
       cardStats: [
-        { value: "US$34B", label: "Pool global de primas marítimas" },
+        { value: "US$39.9B", label: "Pool global de primas marítimas" },
         { value: "40%", label: "Siniestros disputados por mala documentación" },
         { value: "3–6 sem", label: "Tiempo promedio para suscribir una póliza" },
       ],
@@ -574,7 +574,7 @@ const translations = {
         },
         {
           label: "Datos Estructurados",
-          detail: "Puntajes de condición, valoraciones y verificaciones de cumplimiento mapeados contra 47+ estándares internacionales.",
+          detail: "Puntajes de condición, valoraciones y verificaciones de cumplimiento mapeados contra 27+ estándares internacionales.",
         },
         {
           label: "Decisiones de Suscripción",
@@ -599,22 +599,22 @@ const translations = {
           eyebrow: "Etapa 02 — Entender",
           title: "Puntuar la condición.",
           description:
-            "La plataforma traduce los hallazgos visuales en datos de condición estructurados. Cada componente se puntúa contra SOLAS, MARPOL, ABYC y 47+ estándares marítimos. El resultado es una evaluación repetible y objetiva — consistente sin importar quién suba los datos o dónde esté la embarcación.",
+            "La plataforma traduce los hallazgos visuales en datos de condición estructurados. Cada componente se puntúa contra SOLAS, MARPOL, ABYC y 27+ estándares marítimos. El resultado es una evaluación repetible y objetiva — consistente sin importar quién suba los datos o dónde esté la embarcación.",
           features: ["Puntuación de Condición", "Cumplimiento Normativo", "Consistencia"],
         },
         {
-          eyebrow: "Etapa 03 — Valorar",
-          title: "Determinar cuánto vale.",
-          description:
-            "El sistema cruza datos de condición con comparables de mercado, curvas de depreciación y benchmarks de costo de reposición para producir una valoración defendible del buque. Sin adivinanzas. Sin estimaciones de broker. Un número respaldado por datos.",
-          features: ["Valoración de Mercado", "Curvas de Depreciación", "Análisis Comparativo"],
-        },
-        {
-          eyebrow: "Etapa 04 — Decidir",
+          eyebrow: "Etapa 03 — Decidir",
           title: "Cotizar con trazabilidad total.",
           description:
             "Los datos de condición y valoración fluyen a nuestro motor de precios determinístico. El resultado: primas H&M y P&I donde cada variable está nombrada, ponderada y registrada con marca temporal. Mismas entradas, mismo resultado, siempre. Diseñado para auditoría, diseñado para la línea.",
           features: ["Motor de Primas", "Ponderación de Riesgo", "Registro de Auditoría"],
+        },
+        {
+          eyebrow: "Etapa 04 — Valorar",
+          title: "Determinar cuánto vale.",
+          description:
+            "El sistema cruza datos de condición con comparables de mercado, curvas de depreciación y benchmarks de costo de reposición para producir una valoración defendible del buque. Sin adivinanzas. Sin estimaciones de broker. Un número respaldado por datos.",
+          features: ["Valoración de Mercado", "Curvas de Depreciación", "Análisis Comparativo"],
         },
         {
           eyebrow: "Etapa 05 — Monitorear",
@@ -660,7 +660,7 @@ const translations = {
       metrics: [
         { label: "Perfiles de embarcaciones en el sistema", value: "Creciendo" },
         { label: "Puntos de datos por embarcación", value: "200+" },
-        { label: "Estándares marítimos mapeados", value: "47+" },
+        { label: "Estándares marítimos mapeados", value: "27+" },
         { label: "Mejora de precisión en primas", value: "Continua" },
       ],
       anchor: "Esto no es una funcionalidad. Es una barrera competitiva.",
@@ -737,7 +737,7 @@ const translations = {
         "Procesando datos de embarcaciones en rutas marítimas globales. Construyendo el tejido conectivo entre activos físicos y decisiones financieras.",
       cta: "Hablemos",
       items: [
-        { label: "Estándares Mapeados", value: "47+" },
+        { label: "Estándares Mapeados", value: "27+" },
         { label: "Zonas Estructurales Evaluadas", value: "7" },
         { label: "Variables de Pricing", value: "200+" },
         { label: "Socios de Integración", value: "6+" },

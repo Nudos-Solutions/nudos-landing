@@ -102,8 +102,8 @@ export const services: ServicePage[] = [
     slug: "condition-scoring",
     title: "Vessel Condition Scoring",
     metaDescription:
-      "Automated vessel condition scoring against SOLAS, MARPOL, and 47+ maritime standards. Consistent, repeatable, defensible.",
-    h1: "Score vessel condition against 47+ maritime standards",
+      "Automated vessel condition scoring against SOLAS, MARPOL, and 27+ maritime standards. Consistent, repeatable, defensible.",
+    h1: "Score vessel condition against 27+ maritime standards",
     subtitle:
       "The platform translates visual findings into structured condition data. Every component is scored against international maritime standards. The output is consistent regardless of who uploads the data.",
     problems: [
@@ -123,7 +123,7 @@ export const services: ServicePage[] = [
         icon: "ShieldAlert",
         title: "Compliance gaps",
         description:
-          "Checking a vessel against 47+ international standards manually is slow, error-prone, and rarely comprehensive.",
+          "Checking a vessel against 27+ international standards manually is slow, error-prone, and rarely comprehensive.",
       },
     ],
     steps: [
@@ -137,7 +137,7 @@ export const services: ServicePage[] = [
         number: "02",
         title: "Standards mapping",
         description:
-          "Each finding is checked against SOLAS, MARPOL, ABYC, and 47+ international maritime standards.",
+          "Each finding is checked against SOLAS, MARPOL, ABYC, and 27+ international maritime standards.",
       },
       {
         number: "03",
@@ -153,7 +153,7 @@ export const services: ServicePage[] = [
       },
     ],
     capabilities: [
-      { title: "47+ standards", description: "SOLAS, MARPOL, ABYC, and classification society rules" },
+      { title: "27+ standards", description: "SOLAS, MARPOL, ABYC, and classification society rules" },
       { title: "Component-level scoring", description: "Individual scores for hull, deck, machinery, fittings" },
       { title: "Repeatability", description: "Same inputs produce same scores, every time" },
       { title: "Severity classification", description: "Critical, major, minor, cosmetic damage grades" },
@@ -163,7 +163,7 @@ export const services: ServicePage[] = [
     faqs: [
       {
         question: "What maritime standards does the scoring engine check against?",
-        answer: "The engine evaluates vessels against 47+ standards including SOLAS (Safety of Life at Sea), MARPOL (Marine Pollution), ABYC (American Boat and Yacht Council), and classification society rules from Lloyd's Register, DNV, Bureau Veritas, and ABS.",
+        answer: "The engine evaluates vessels against 27+ standards including SOLAS (Safety of Life at Sea), MARPOL (Marine Pollution), ABYC (American Boat and Yacht Council), and classification society rules from Lloyd's Register, DNV, Bureau Veritas, and ABS.",
       },
       {
         question: "How is the vessel condition score calculated?",

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const milestones = [
   { year: "2024", event: "NUDOS founded in Montevideo, Uruguay" },
   { year: "2024", event: "Computer vision engine for vessel inspection developed" },
-  { year: "2025", event: "Condition scoring engine launched — 47+ maritime standards" },
+  { year: "2025", event: "Condition scoring engine launched — 27+ maritime standards" },
   { year: "2025", event: "Miami Beach office opened for Americas market" },
   { year: "2025", event: "Deterministic premium engine and claims intelligence released" },
   { year: "2026", event: "Full AI underwriting pipeline operational" },
@@ -183,7 +183,7 @@ export default function AboutPage() {
                   <Briefcase className="w-4 h-4 text-accent shrink-0 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-foreground">Marine Insurance</p>
-                    <p className="text-xs text-foreground/50">H&M, P&I, cargo, liability coverage</p>
+                    <p className="text-xs text-foreground/50">H&M, cargo, liability coverage</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

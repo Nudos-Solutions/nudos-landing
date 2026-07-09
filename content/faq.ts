@@ -15,7 +15,7 @@ export const faqItems: FaqItem[] = [
     category: "General",
     question: "How does Nudos work?",
     answer:
-      'The platform operates in five stages: Capture (vessel imagery processed by computer vision), Understand (condition scoring against 47+ maritime standards), Value (market-based vessel valuation), Decide (deterministic premium calculation), and Monitor (ongoing condition tracking). Data flows through each stage automatically — no manual handoffs. <a href="/services/vessel-inspection">Learn more about our inspection pipeline</a>.',
+      'The platform operates in five stages: Capture (vessel imagery processed by computer vision), Understand (condition scoring against 27+ maritime standards), Value (market-based vessel valuation), Decide (deterministic premium calculation), and Monitor (ongoing condition tracking). Data flows through each stage automatically — no manual handoffs. <a href="/services/vessel-inspection">Learn more about our inspection pipeline</a>.',
   },
   {
     category: "General",
@@ -39,7 +39,7 @@ export const faqItems: FaqItem[] = [
     category: "Inspection & Technology",
     question: "What maritime standards does Nudos check against?",
     answer:
-      'Nudos checks vessel condition against 47+ international maritime standards including SOLAS (Safety of Life at Sea), MARPOL (Marine Pollution), ABYC (American Boat and Yacht Council), and major classification society rules from Lloyd\'s, DNV, Bureau Veritas, and ABS. <a href="/glossary">See our marine insurance glossary</a> for standard definitions.',
+      'Nudos checks vessel condition against 27+ international maritime standards including SOLAS (Safety of Life at Sea), MARPOL (Marine Pollution), ABYC (American Boat and Yacht Council), and major classification society rules from Lloyd\'s, DNV, Bureau Veritas, and ABS. <a href="/glossary">See our marine insurance glossary</a> for standard definitions.',
   },
   {
     category: "Inspection & Technology",

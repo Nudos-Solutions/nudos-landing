@@ -47,7 +47,7 @@ const sections = [
     id: "condition-scoring",
     title: "2. Vessel Condition Scoring",
     content:
-      "Inspection data alone is not enough for underwriting. It needs to be translated into a standardized, quantitative assessment. Condition scoring evaluates every structural component against 47+ international maritime standards — SOLAS, MARPOL, ABYC, and classification society rules — producing a repeatable, defensible vessel condition score.",
+      "Inspection data alone is not enough for underwriting. It needs to be translated into a standardized, quantitative assessment. Condition scoring evaluates every structural component against 27+ international maritime standards — SOLAS, MARPOL, ABYC, and classification society rules — producing a repeatable, defensible vessel condition score.",
     details: [
       "Component-level scoring: hull plating, deck surfaces, coating systems, through-hulls, machinery",
       "Standard compliance: automatic checking against SOLAS, MARPOL, ABYC, and classification rules",
@@ -77,7 +77,7 @@ const sections = [
     id: "premium-engine",
     title: "4. Deterministic Premium Calculation",
     content:
-      "The final step in the underwriting pipeline: converting condition and valuation data into calculated premiums. A deterministic pricing engine — where every variable is named, weighted, and timestamped — generates H&M and P&I premiums with a complete audit trail.",
+      "The final step in the underwriting pipeline: converting condition and valuation data into calculated premiums. A deterministic pricing engine — where every variable is named, weighted, and timestamped — generates H&M premiums with a complete audit trail.",
     details: [
       "Deterministic: same inputs always produce the same premium (unlike probabilistic ML models)",
       "12+ risk variables: vessel condition, age, type, trading area, claims history, compliance",
